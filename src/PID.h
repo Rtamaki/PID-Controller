@@ -1,21 +1,25 @@
 #ifndef PID_H
 #define PID_H
 
+#include <cmath>
+
 class PID {
 public:
   /*
   * Errors
   */
   double p_error;
+  double prev_p_error;
   double i_error;
   double d_error;
 
+
   /*
   * Coefficients
-  */ 
-  double Kp;
-  double Ki;
-  double Kd;
+  */
+  double pid_Kp;
+  double pid_Ki;
+  double pid_Kd;
 
   /*
   * Constructor
