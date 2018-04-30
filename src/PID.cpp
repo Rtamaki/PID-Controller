@@ -36,3 +36,10 @@ void PID::UpdateError(double cte) {
 double PID::TotalError() {
   return abs(p_error) + abs(d_error) + abs(i_error);
 }
+
+
+double PID::Steering(){
+
+  return (pid_Kp * p_error - pid_Kd * d_error - pid_Ki * i_error);
+
+}

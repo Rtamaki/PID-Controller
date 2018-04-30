@@ -71,7 +71,7 @@ int main()
           std::cout << pid.i_error << '\n';
           pid.UpdateError(cte) ;
 
-          steer_value = -pid.pid_Kp * pid.p_error - pid.pid_Kd * pid.d_error - pid.pid_Ki * pid.i_error;
+          steer_value = pid.Steering();
           if(steer_value < -1)
             steer_value = -1;
           if(steer_value > 1)
